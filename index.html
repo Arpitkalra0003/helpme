@@ -86,8 +86,84 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			        });
 			    });
 			   </script>
+			   
+			   
+			   
+			   <style>
+			 
+			   #show{
+			
+			  width:100%;
+height:100%;
+opacity:.95;
+top:0;
+left:0;
+display:none;
+position:fixed;
+background-color:#313131;
+overflow:auto
+
+			   }
+			   
+			   #pop{
+			 background-color:white;
+			 margin:0px 0px 0px 330px;
+			   
+			   }
+			     .query{
+			   background-color:#232527;
+			   border-color:#232527;
+			   border-collapse:collapse;
+			   padding:10px 30px 10px 30px;
+			   margin:70px;
+			   color:white;
+			   
+			   }
+			     .query:hover{
+			   background-color:#1b88f5;
+			   border-color:#1b88f5;
+			  
+			   border-collapse:collapse;
+			   padding:10px 30px 10px 30px;
+			   margin:70px;
+			   color:white;
+			   
+			   }
+			   @media only screen and (max-width:500px){
+			      
+			   #pop{
+			 background-color:white;
+			 margin:0px 0px 0px 0px;
+			   }
+			      .query{
+			   background-color:#232527;
+			   border-color:#232527;
+			   border-collapse:collapse;
+			   padding:10px 10px 10px 10px;
+			   margin:70px;
+			   color:white;
+			   
+			   }
+			     .query:hover{
+			   background-color:#1b88f5;
+			   border-color:#1b88f5;
+			  
+			   border-collapse:collapse;
+			   padding:10px 10px 10px 10px;
+			   margin:70px;
+			   color:white;
+			   
+			   }
+			   
+			   }
+			 
+			  
+			   </style>
 </head>
-<body>
+<body >
+
+
+
     <div class="header">
      <div class="container">
 		 <div class="logo">
@@ -203,7 +279,32 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
    						</script> 	           	      
            </div>
       </div>
-      <div class="main">
+	  
+	  
+	  						   
+	   <div id="show" class="container" >
+		<div class="col-md-6" id="pop" >
+			<ul class="f_grid1">
+					<li><i class="f-msg"> </i><div class="extra-wrap">
+					<p>Have Any Query ?</p>
+					</div>
+					<div class="clearfix"> </div></li>
+				</ul>
+				<p class="m_14">Kindly register your email address here, We will Contact you asap.</p>
+				<div class="footer_search" style="padding:20px 20px;margin-top:0%;">
+				   <form>
+				     <input  type="text" placeholder="Enter your email"  required>
+				     <input  type="submit" value="Submit">
+				   </form>
+			    </div>
+
+	 
+	   </div>
+	   
+	   
+	   </div>		
+	  
+      <div class="main" id="main">
       	<div class="content-top" id="fea">
       		<div class="container">
 			<div class="col-md-8">
@@ -245,7 +346,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 	</div>	
 	 </div>
       		
-				<div class="col-md-4"><ul class="f_grid1">
+				<div class="col-md-4">
+				
+				<ul class="f_grid1">
 					<li><i class="f-msg"> </i><div class="extra-wrap">
 					<p>Newsletter</p>
 					</div>
@@ -257,7 +360,26 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				     <input type="text" placeholder="Enter your email"  required>
 				     <input type="submit" value="Submit">
 				   </form>
-			    </div> </div>
+			    </div>
+				<button onclick="popup();"  class="query" >
+				
+				  Have Any Query ???
+			
+				
+				</button>
+		
+				</div>
+		
+<script type="text/javascript">
+function popup(){
+document.getElementById("show").style.display="block";
+document.getElementById("main").style.display="none";
+
+}
+
+</script>
+
+				</div>
       		</div>
       	</div>
       
@@ -506,6 +628,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 		    <a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;">top </span></a>
 	   	</div>
 	   </div>
+	   
+	   
+	
 </body>
 </html>
 
